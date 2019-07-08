@@ -21,3 +21,7 @@ set(SOURCES
 )
 
 add_library(raspidmx SHARED ${SOURCES})
+set_target_properties(raspidmx PROPERTIES SOVERSION 1)
+
+install(TARGETS raspidmx
+    LIBRARY DESTINATION lib)
